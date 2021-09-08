@@ -1,0 +1,19 @@
+{
+  "name": "as-sec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:optimized"
+  },
+  "author": "shhnjk",
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "^0.19.12"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.12",
+    "as-bind": "^0.8.2"
+  }
+}
