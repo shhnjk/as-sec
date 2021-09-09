@@ -12,7 +12,7 @@ There were few blog post ([example](https://surma.dev/things/js-to-asc/index.htm
 ## Structure of the repo
 - [index.ts](https://github.com/shhnjk/as-sec/blob/main/assembly/index.ts) is the source code of WASM written in [AssemblyScript](https://www.assemblyscript.org/).
 - [optimized.wasm](https://github.com/shhnjk/as-sec/blob/main/build/optimized.wasm) is the compiled WASM code.
-- [web](https://github.com/shhnjk/as-sec/tree/main/web) directory has HTML and JS code which uses WASM.
+- [web](https://github.com/shhnjk/as-sec/tree/main/web) directory has HTML and JS code which uses WASM ([live demo](https://shhnjk.github.io/PoCs/wasm/wasm.html)).
 
 ## How to build
 
@@ -20,3 +20,6 @@ In case you want to make changes, follow [quick start](https://www.assemblyscrip
 
 ## Conclusion
 
+I was able to confirm in the [PoC](https://shhnjk.github.io/PoCs/wasm/wasm.html) that it's relatively easy to confirm what kind of capabilities the WASM needs my looking at [importObject](https://github.com/shhnjk/as-sec/blob/615f4c3655c3b31c85795f5e3ef7811fff8244de/web/wasm.js#L7-L12), and I was able to provide [alternative importObject](https://github.com/shhnjk/as-sec/blob/615f4c3655c3b31c85795f5e3ef7811fff8244de/web/careful-dev.js#L8-L12) which blocks dangerous behavior.
+
+However, there are many libraries that support large [importObject](https://github.com/lume/asdom/blob/4014a4d59242fa56459b3d04f869660ebc53a437/glue/index.js#L116-L808). So at the point where libraries take advantage of such library to acccess DOM or network, it'll be difficult to know what's being used and what's not 😢
