@@ -2,7 +2,6 @@
   "name": "as-sec",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "asbuild:optimized": "asc assembly/index.ts --target release",
     "asbuild": "npm run asbuild:optimized"
