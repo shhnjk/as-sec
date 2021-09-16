@@ -1,6 +1,6 @@
 # as-sec
 
-This repo is a PoC for verifying a thought I had, that WASM might be an interesting tool for Web Security.
+This repo is a PoC for verifying a thought I had, that WASM might be an interesting tool for Web Security. I.e. it might bring capability-based Web, instead of having access to all APIs by default (especially to third-party libraries).
 
 ## intro
 
